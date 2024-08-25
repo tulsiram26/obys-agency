@@ -13,7 +13,7 @@ tl.from("#line1-part1",{
         var grow = 0
         setInterval(function(){
             if(grow<100){
-                h5timer.innerHTML =grow++
+                h5timer.innerHTML = grow++
             }else{
         h5timer.innerHTML = grow
             }
