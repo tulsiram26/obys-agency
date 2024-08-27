@@ -1,37 +1,36 @@
-function locomotiveAnimation(){
+function locomotive(){
     gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
-});
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
-
-// tell ScrollTrigger to use these proxy methods for the "" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-});
-
-
-
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
+    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+    
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector("#main"),
+      smooth: true
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
+    
+    // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy("#main", {
+      scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+      }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+      getBoundingClientRect() {
+        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+      },
+      // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+      pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
+    
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
+    
 
 }
- 
+
 function loader(){
     var tl = gsap.timeline();
 tl.from(".line h1 ,.line h2",{
@@ -82,7 +81,6 @@ tl.from(".hero h1,.hero h2",{
 },"-=1.2")
 
 }
-
 function magnethover(){
     //cursor circle
     Shery.mouseFollower({
@@ -142,7 +140,6 @@ function magnethover(){
            }
     })
 }
-
 function sheryanimation(){
     Shery.imageEffect(".img-div",{
         style:5,
@@ -150,8 +147,45 @@ function sheryanimation(){
         gooey:true
     }) 
 }
+function flaganimation(){
+    document.addEventListener("mousemove", function (dets) {
+        gsap.to("#flag", {
+          x: dets.x,
+          y: dets.y
+        })
+      })
+      document.querySelector("#hero3").addEventListener("mouseenter", function () {
+        gsap.to("#flag",{
+          opacity: 1
+        })
+      })
+      document.querySelector("#hero3").addEventListener("mouseleave", function () {
+        gsap.to("#flag", {
+          opacity: 0
+        })
+      })
+}
+function footeranimation (){
+    var footerh1 = document.querySelector("#footer-h1")
+footerh1.addEventListener("mouseenter",function(){
+    gsap.to("#footer-h1",{
+        onStart:function(){
+            $('#footer-h1').textillate({ in: { effect: 'fadeIn' } });
+        }
+    })
+})
+footerh1.addEventListener("mouseleave",function(){
+    gsap.from("#footer-h1",{
+        onStart:function(){
+            $('#footer-h1').textillate({ in: { effect: 'fadeOut' } });
+        }
+    })
+})
 
+}
 magnethover();
 loader();
 sheryanimation();
 locomotive();
+flaganimation();
+footeranimations(); 
