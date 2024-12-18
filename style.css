@@ -1,28 +1,7 @@
-
-@font-face{
-    font-family: "Plain Light";
-    src: url(./plain-light-webfont.ttf);
-}
-@font-face{
-    font-family: "Plain Light";
-    src: url(./plain-regular-webfont.ttf);
-}
-@font-face{
-    font-family: "Silk Serif";
-    src: url(./silkserif-lightitalic-webfont.ttf);
-}
-@font-face{
-    font-family: "Silk Serif";
-    src: url(./silkserif-regularitalic-webfont.ttf);
-}
-
-
-
 *{
     padding: 0;
     margin: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     color: #fff;
     font-family: "plain light";
 }
@@ -51,35 +30,19 @@ html,body{
 
 }
 .line{
-   height: -webkit-fit-content;
-   height: -moz-fit-content;
    height: fit-content;
-   width: -webkit-fit-content;
-   width: -moz-fit-content;
    width: fit-content;
    overflow: hidden;
-   display: -webkit-box;
-   display: -ms-flexbox;
    display: flex;
-   -webkit-box-pack: start;
-       -ms-flex-pack: start;
-           justify-content: start;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
+   justify-content: start;
+   align-items: center;
    gap: 1.5vw;
    
 }
 .line1-part1{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-   -webkit-box-pack: start;
-       -ms-flex-pack: start;
-           justify-content: start;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
+   justify-content: start;
+   align-items: center;
    gap: 1.5vw;
 }
 .line1-part1 h5,.line1-part1 h6{
@@ -95,42 +58,9 @@ html,body{
     font-size: 4.6vw;
     padding-right: 12px;
     font-weight: 900;
-    -webkit-animation-name: anime;
-            animation-name: anime;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-}
-@-webkit-keyframes anime {
-    0%{
-        font-family: plain light;
-        -webkit-text-stroke: 1px #fff;
-        color: white;
-        font-weight: 500;
-        opacity: 1;
-    }
-    47%{
-        font-family: plain light;
-        -webkit-text-stroke: 1px #fff;
-        color: white;
-        font-weight: 500;
-        opacity: 0;
-    }
-    50%{
-        font-family: silk serif;
-        -webkit-text-stroke: 1px #fff;
-        color: transparent;
-        font-weight: 500;
-        opacity: 1;
-    }
-    100%{
-        font-family: silk serif;
-        -webkit-text-stroke: 1px #fff;
-        color: transparent;
-        font-weight: 500;
-        opacity: 0;
-    }
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 @keyframes anime {
     0%{
@@ -172,28 +102,16 @@ html,body{
     background-color: #151515;
 }
 #nav{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding: 3vw 5vw;
     padding-left: 8vw;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 #nav-part2{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     gap: 2.5vw;
     
 }
@@ -205,15 +123,9 @@ html,body{
     /* background-color: red; */
     margin-left: 27%;
     overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack:start;
-        -ms-flex-pack:start;
-            justify-content:start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content:start;
+    align-items: center;
 
 }
 .hero h1{
@@ -256,9 +168,7 @@ html,body{
     top: 0;
     left: 0;
     opacity: 0;
-    -webkit-transform: translate("-50%,-50%");
-        -ms-transform: translate("-50%,-50%");
-            transform: translate("-50%,-50%");
+    transform: translate("-50%,-50%");
 }
 #hero3{
     z-index: 999;
@@ -283,16 +193,14 @@ html,body{
 #video-container video{
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 } 
 #video-container img{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 #video-cursor{
     width: 10vw;
@@ -303,15 +211,9 @@ html,body{
     top: -15%;
     left: 70%;
     z-index: 999;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 #video-cursor i{
     font-size: 2vw;
@@ -355,17 +257,10 @@ html,body{
 #page3-img-container{
     padding: 5vw 2vw;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     /* background-color: #ffa63d; */
 }
 .img-div{
@@ -373,18 +268,15 @@ html,body{
     width: 31vw;
     background-color: blue;
     overflow: hidden;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
     margin-top: 2vw;
     
 }
 .img-div img{
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
+    object-fit: cover;
+    object-position: center;
 }
 #img-div1{
     /* background-color:yellow; */
@@ -400,12 +292,8 @@ html,body{
      font-size: 2.5vw;
 }
 .img-div-bottom{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     padding-top: 2vw;
 }
 .img-div-bottom h5{
@@ -433,15 +321,9 @@ html,body{
     width: 23vw;
     border-radius: 50%;
     border: solid white 1px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     margin-top: 70vh;
     margin-left: 8vw;
     position: relative;
@@ -455,15 +337,9 @@ html,body{
     width: 22vw;
     border-radius: 50%;
     border: solid white 1px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     /* margin-top: 23vh; */
     /* margin-left: 10vw; */
     position: relative;
@@ -481,19 +357,11 @@ html,body{
     top: 0;
     left: 0;
     background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     scale: 0;
-    -webkit-transition: all ease 0.3s;
-    -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
 .circle-in p{
@@ -502,12 +370,8 @@ html,body{
        font-weight: 500;
        width: 60%;
        scale: 0;
-       -webkit-transition: all ease 0.3s;
-       -o-transition: all ease 0.3s;
        transition: all ease 0.3s;
-       -webkit-transition-delay: 0.3s;
-            -o-transition-delay: 0.3s;
-               transition-delay: 0.3s;
+       transition-delay: 0.3s;
        opacity: 0;
 }
 .page3-circle1:hover .circle-in{
@@ -542,17 +406,9 @@ html,body{
     
     /* transform: translateX(180%); */
     margin-left: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: all ease 0.2s;
-    -o-transition: all ease 0.2s;
+    justify-content: center;
+    align-items: center;
     transition: all ease 0.2s;
 }
 #orange-circle h3{
@@ -606,16 +462,13 @@ html,body{
     line-height: 2.7vw;
 }
 #flex-box{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-top: 4vw;
 }
 #flex-box img{
     width: 45%;
     height: 40%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 #flex-box p{
     width: 28%;
@@ -637,15 +490,9 @@ html,body{
     width: 25vw;
     height: 7vw;
     border-bottom: 1px solid #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     margin: 0vw 3.5vw;
     gap: 2vw;
     /* background-color: #ffa63d; */
@@ -687,14 +534,10 @@ body{
     color: transparent;
     text-transform: uppercase;
     display: inline-block;
-    -webkit-animation-name: text-anime;
-            animation-name: text-anime;
-   -webkit-animation-duration: 18s;
-           animation-duration: 18s;
-   -webkit-animation-iteration-count: infinite;
-           animation-iteration-count: infinite;
-   -webkit-animation-timing-function: linear;
-           animation-timing-function: linear;
+    animation-name: text-anime;
+   animation-duration: 18s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
    margin-bottom: -3vw;
  }
  .elem-text2{
@@ -709,14 +552,10 @@ body{
     color: transparent;
     text-transform: uppercase;
     display: inline-block;
-    -webkit-animation-name: text-anime;
-            animation-name: text-anime;
-   -webkit-animation-duration: 18s;
-           animation-duration: 18s;
-   -webkit-animation-iteration-count: infinite;
-           animation-iteration-count: infinite;
-   -webkit-animation-timing-function: linear;
-           animation-timing-function: linear;
+    animation-name: text-anime;
+   animation-duration: 18s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
    animation-direction: reverse;
    margin-bottom: -3vw;
  }
@@ -730,24 +569,12 @@ body{
     -webkit-text-stroke: 1px #fff;
     color: transparent;
  }
- @-webkit-keyframes text-anime {
-    0%{
-       -webkit-transform: translateX(0);
-               transform: translateX(0);
-    }
-    100%{
-        -webkit-transform: translateX(calc(-100% - 4px));
-                transform: translateX(calc(-100% - 4px));
-    }
- }
  @keyframes text-anime {
     0%{
-       -webkit-transform: translateX(0);
-               transform: translateX(0);
+       transform: translateX(0);
     }
     100%{
-        -webkit-transform: translateX(calc(-100% - 4px));
-                transform: translateX(calc(-100% - 4px));
+        transform: translateX(calc(-100% - 4px));
     }
  }
  #footer{
@@ -783,15 +610,9 @@ body{
 
  }
  #footer-div{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: flex-start;
+    justify-content: space-between;
     padding-right: 15vw;
     padding-top: 4vw;
     margin-bottom: 8vw;
